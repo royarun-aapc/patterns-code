@@ -1,0 +1,76 @@
+//
+// Badge styles
+// --------------------------------------------------
+
+
+.badge {
+	background: @type-color-primary;
+	color: @color-white;
+	border-radius: 50%;
+	display: inline-block;
+  	padding: .1em .6em;
+	&.outline{
+		background: @color-white;
+		color: @type-color-primary;
+		border: solid 2px @type-color-primary;
+	}
+	&:empty {
+		display: none !important;
+	}
+
+	&.primary {
+		background:@color-primary;
+		&.outline {
+			background: @color-white;
+			border-color: @color-primary;
+			color: @color-primary;
+		}	
+	}
+
+	&.accent {
+		background:@color-accent;
+		&.outline {
+			background: @color-white;
+			border-color: @color-accent;
+			color: @color-accent;
+		}	
+	}
+
+	&.info {
+		background:@color-info;
+		&.outline {
+			background: @color-white;
+			border-color: @color-info;
+			color: @color-info;
+		}	
+	}
+
+	&.success {
+		background:@color-success;
+		&.outline {
+			background: @color-white;
+			border-color: @color-success;
+			color: @color-success;
+		}	
+	}
+
+	&.warning {
+		background:@color-warning;
+		&.outline {
+			background: @color-white;
+			border-color: @color-warning;
+			color: @color-warning;
+		}	
+	}
+
+	&.error {
+		background:@color-error;
+		&.outline {
+			background: @color-white;
+			border-color: @color-error;
+			color: @color-error;
+		}	
+	}
+}
+
+

@@ -1,0 +1,68 @@
+.shadow-level-0() {
+	box-shadow: @shadow-level-0;
+}
+
+.shadow-level-1() {
+	box-shadow: @shadow-level-1;
+}
+
+.shadow-level-2() {
+	box-shadow: @shadow-level-2;
+}
+
+.shadow-level-3() {
+	box-shadow: @shadow-level-3;
+}
+
+.shadow-level-4() {
+	box-shadow: @shadow-level-4;
+}
+
+.shadow-level-5() {
+	box-shadow: @shadow-level-5;
+}
+
+.shadow-transition() {
+	transition: box-shadow @animation-speed-default @animation-type;
+}
+
+.shadow-hover-0() {
+	.shadow-transition();
+	&:hover {
+		box-shadow: @shadow-level-0;
+	}
+}
+
+.shadow-hover-1() {
+	.shadow-transition();
+	&:hover {
+		box-shadow: @shadow-level-1;
+	}
+}
+.shadow-hover-2() {
+	.shadow-transition();
+	&:hover {
+		box-shadow: @shadow-level-2;
+	}
+}
+
+.shadow-hover-3() {
+	.shadow-transition();
+	&:hover {
+		box-shadow: @shadow-level-3;
+	}
+}
+
+.shadow-hover-4() {
+	.shadow-transition();
+	&:hover {
+		box-shadow: @shadow-level-4;
+	}
+}
+
+.shadow-hover-5() {
+	.shadow-transition();
+	&:hover {
+		box-shadow: @shadow-level-5;
+	}
+}

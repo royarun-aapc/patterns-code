@@ -1,0 +1,17 @@
+//
+// Animation styles
+// --------------------------------------------------
+
+
+
+.animate(@prop: all) {
+  transition: @prop @animation-speed-default @animation-type;
+}
+
+.animate-fast(@prop: all) {
+   transition: @prop @animation-speed-fast @animation-type;
+}
+
+.animate-slow(@prop: all) {
+   transition: @prop @animation-speed-slow @animation-type;
+}

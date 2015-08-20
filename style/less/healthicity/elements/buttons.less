@@ -1,0 +1,142 @@
+//
+// Button styles
+// --------------------------------------------------
+
+
+button, a.btn {
+	.btn();
+}
+.btn() {
+	background: @color-primary;
+	font-weight: 400;
+	color: @color-white;
+	border: 0;
+	font-size: @type-size-body-primary;
+	padding: 1em 2em;
+	margin: 1rem auto;
+	border-radius: 2px;
+	width: 100%;
+	text-align: center;
+	@media (min-width: @screen-sm) {
+		width: auto;
+		margin: 1rem;
+	}
+	.shadow-level-1();
+	.shadow-hover-2();
+	display: inline-block;
+	i {
+		margin: 0 1em 0 -1em;
+		display: inline-block;
+	}
+	&:disabled {
+		background: @color-gray-light;
+		color: fade(@color-white, 50%);
+		.shadow-hover-1();
+	}
+}
+
+.btn--accent() {
+	background: @color-accent;
+}
+
+.btn--outline(@color:@color-accent, @bg: @color-white) {
+	border: solid 1px @color;
+	color: @color;
+	background: @bg;
+}
+
+
+.btn--secondary() {
+	.btn();
+	background: transparent;
+	.shadow-level-0();
+	transition: background @animation-speed-default @animation-type;
+	color: @color-accent;
+	&:hover {
+		background: @color-accent-secondary;
+		.shadow-level-0();
+	}
+}
+.btn--tertiary() {
+	.btn();
+	background: transparent;
+	.shadow-level-0();
+	transition: background @animation-speed-default @animation-type;
+	color: @type-color-primary;
+	&:hover {
+		background: @color-gray-lighter;
+		.shadow-level-0();
+	}
+}
+
+.btn--round() {
+	padding: 1.5em;
+	border-radius: 50%;
+	position: relative;
+	width: auto;
+	i {
+		margin: 0;
+		.center-all();
+	}
+}
+.btn--square() {
+	padding: 1.5em;
+	position: relative;
+	width: auto;
+	i {
+		margin: 0;
+		.center-all();
+	}
+
+}
+
+
+.btn--sm() {
+	font-size: @type-size-body-sm;
+	font-weight: 600;
+}
+.btn--lg() {
+	font-size: @type-size-body-lg;
+	
+}
+
+
+
+	
+
+div.btn-group {
+	margin: 1rem auto;
+	@media (min-width: @screen-sm) {
+		margin: 1rem;
+	}
+	display: block;
+	float: left;
+	.shadow-level-1();
+	button {
+		padding: 1.75em;
+		margin: 0;
+		display: inline-block;
+		outline: none;
+		position: relative;
+		width: auto;
+		transition: background @animation-speed-default @animation-type;
+		.shadow-level-0;
+		&:nth-child(n+2) {
+			margin-left: -5px;
+		}
+		&:active{
+			background: @color-accent-secondary;
+		}
+		&:hover{
+			background: @color-accent-secondary;
+		}
+	}
+	i {
+		margin: 0;
+		.center-all();
+	}
+}
+
+
+
+

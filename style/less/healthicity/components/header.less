@@ -1,0 +1,22 @@
+.header(@size: @header-size-default, @background: @color-primary, @color: @color-white){
+	padding: @size @spacing-padding-lg @spacing-padding-lg;
+	background: @background;
+	color: @color;
+	h1, h2, h3, h4, h5, h6, p, li {
+		color: inherit;
+	}
+}
+
+.header--xl(@background: @color-primary, @color: @color-white) {
+	.header(@header-size-xl, @background, @color);
+}
+
+.header--lg(@background: @color-primary, @color: @color-white) {
+	.header(@header-size-lg, @background, @color);
+}
+.header--md(@background: @color-dark, @color: @color-white) {
+	.header(@header-size-md, @background, @color);
+}
+.header--sm(@background: @color-darker, @color: @color-white) {
+	.header(@header-size-sm, @background, @color);
+}

@@ -1,0 +1,127 @@
+//
+// Icon styles
+// --------------------------------------------------
+
+i {
+    display: inline-block;
+    font: normal normal normal @icon-font-size-base/1 FontAwesome; // shortening font declaration
+    font-size: inherit; // can't have font-size inherit on line above, so need to override
+    text-rendering: auto; // optimizelegibility throws things off #1094
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0); // ensures no half-pixel rendering in firefox
+}
+
+.icon-search:before {content: @icon-search;}
+.icon-add:before {content: @icon-add;}
+.icon-remove:before {content: @icon-remove;}
+.icon-edit:before {content: @icon-edit;}
+.icon-next:before {content: @icon-next;}
+.icon-previous:before {content: @icon-previous;}
+.icon-left:before {content: @icon-left;}
+.icon-right:before {content: @icon-right;}
+.icon-up:before {content: @icon-up;}
+.icon-down:before {content: @icon-down;}
+.icon-settings:before {content: @icon-settings;}
+.icon-filter:before {content: @icon-filter;}
+.icon-success:before {content: @icon-success;}
+.icon-error:before {content: @icon-error;}
+.icon-warning:before {content: @icon-warning;}
+.icon-info:before {content: @icon-info;}
+.icon-user:before {content: @icon-user;}
+.icon-tasks:before {content: @icon-tasks;}
+.icon-notifications:before {content: @icon-notifications;}
+.icon-messages:before {content: @icon-messages;}
+.icon-reports:before {content: @icon-reports;}
+.icon-calendar:before {content: @icon-calendar;}
+.icon-menu:before {content: @icon-menu;}
+.icon-menu-secondary:before {content: @icon-menu-secondary;}
+
+.icon-compliance-audits:before {content: @icon-compliance-audits;}
+.icon-compliance-risk:before {content: @icon-compliance-risk;}
+.icon-compliance-incidents:before {content: @icon-compliance-incidents;}
+.icon-compliance-documents:before {content: @icon-compliance-documents;}
+.icon-compliance-attestations:before {content: @icon-compliance-attestations;}
+.icon-compliance-training:before {content: @icon-compliance-training;}
+.icon-compliance-roles:before {content: @icon-compliance-roles;}
+.icon-compliance-toolbox:before {content: @icon-compliance-toolbox;}
+.icon-compliance-superadmin:before {content: @icon-compliance-superadmin;}
+
+
+
+
+
+i.thin {
+    font-family: @icon-font-secondary;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.thin.icon-alert-circle:before {
+    content: "\e600";
+}
+.thin.icon-alert:before {
+    content: "\e601";
+}
+.thin.icon-avatar-circle:before {
+    content: "\e602";
+}
+.thin.icon-avatar:before {
+    content: "\e603";
+}
+.thin.icon-close-circle:before {
+    content: "\e604";
+}
+.thin.icon-close:before {
+    content: "\e605";
+}
+.thin.icon-home:before {
+    content: "\e606";
+}
+.thin.icon-menu-circle:before {
+    content: "\e607";
+}
+.thin.icon-menu-secondary-circle:before {
+    content: "\e608";
+}
+.thin.icon-menu-secondary:before {
+    content: "\e609";
+}
+.thin.icon-menu:before {
+    content: "\e60a";
+}
+.thin.icon-messages:before {
+    content: "\e60b";
+}
+.thin.icon-notifications:before {
+    content: "\e60c";
+}
+.thin.icon-question-circle:before {
+    content: "\e60d";
+}
+.thin.icon-question:before {
+    content: "\e60e";
+}
+.thin.icon-search:before {
+    content: "\e60f";
+}
+.thin.icon-settings:before {
+    content: "\e610";
+}
+.thin.icon-success-circle:before {
+    content: "\e611";
+}
+.thin.icon-success:before {
+    content: "\e612";
+}
+.thin.icon-tasks:before {
+    content: "\e613";
+}

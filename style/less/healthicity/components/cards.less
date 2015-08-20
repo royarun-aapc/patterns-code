@@ -1,0 +1,88 @@
+//
+// Card Component
+// --------------------------------------------------
+
+.card {
+	display: block;
+	.shadow-level-1();
+	.shadow-hover-3();
+	border-radius: 3px;
+	overflow: hidden;
+	margin: 0;
+	.clearfix();
+	&.fixed {
+		margin: @spacing-margin-md/2;
+		@media (min-width: @screen-sm) {
+			width: 250px;
+			float: left;
+		}
+	}
+	
+	
+	header {
+		padding: @spacing-padding-xl @spacing-padding-md @spacing-padding-sm;
+		
+		h1,h2, h3, h4, h5, h6, p {
+			color: @color-white;
+			margin:0;
+			font-weight: @type-weight-semibold;
+			font-family: @type-font-primary;
+
+		}
+		.primary&{
+			background: @color-primary;
+		}
+		.accent&{
+			background: @color-accent;
+		}
+		.info&{
+			background: @color-info;
+		}
+		.success&{
+			background: @color-success;
+		}
+		.warning&{
+			background: @color-warning;
+		}
+		.error&{
+			background: @color-error;
+		}
+		.gray&{
+			background: @color-gray;
+		}
+		
+	}
+	
+	main {
+		padding: @spacing-padding-md;
+		min-height: 100px;
+		padding-bottom: @spacing-padding-xl;
+	}
+	footer {
+		border-top: solid 1px @color-gray-light;
+		button, a {
+			margin: @spacing-margin-sm;
+
+			.btn--tertiary();
+			&:nth-child(n+2) {
+				margin-left: 0;
+			}
+			margin: 0;
+			display: block;
+			text-align: left;
+			@media (min-width: @screen-sm) {
+				margin: 0;
+			}
+			&:not(:only-child) {
+				float: left;
+				max-width: 50%;
+				font-size: 0.8em;
+			}
+		}
+	}
+}
+
+.card-container {
+	padding: @spacing-padding-md/2;
+	
+}

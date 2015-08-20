@@ -1,0 +1,514 @@
+//
+// Navigation Component
+// --------------------------------------------------
+
+
+
+
+
+main.content {
+	@media (min-width: @screen-sm) {
+		padding-left: 0;
+		position: absolute;
+		width: 100%;
+	}
+	@media (min-width: @screen-xl) {
+		.nav-open &{
+			padding-left: 0;
+		}		
+	}
+}
+
+
+
+// .flat-button(){
+// 	background: none;
+// 	border: none;
+// 	outline: none;
+	
+// }
+
+nav.primary{
+	.shadow-level-3();
+	overflow: hidden;
+	max-height: 2000px;
+	background: @nav-primary-background;
+	position:fixed;
+	z-index: 5;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	.animate();
+	 i {
+	 	width: 24px;
+		text-align: center;
+	 }
+
+	@media (min-width: @screen-sm) {
+			max-width: 300px;
+			padding-top: 100px;
+	}
+
+	.logo-full {
+		height: 60px;
+		margin: 12px;
+		opacity: 1;
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: none;
+		.animate();
+		@media (min-width: @screen-sm) {
+			display: block;
+		}
+	}
+	.logo-icon {
+		height: 60px;
+		margin: 6px;
+		opacity: 0;
+		position: absolute;
+		top: 12px;
+		left: 12px;
+		display: none;
+		.animate();
+		@media (min-width: @screen-sm) {
+			display: block;
+		}
+	}
+	.modules{
+		h3{
+			color: @nav-primary-text-color;
+			padding: 0 12px;
+			.animate();
+		}
+		a {
+			display: block;
+			line-height: 48px;
+			white-space: nowrap;
+			display: block;
+			padding-left:18px;
+			color: @nav-primary-text-color;
+			font-size: 16px;
+			position: relative;
+			border: none;
+			.animate-fast();
+			i{
+				margin-right: 24px;
+				font-size: 20px;
+				color:@nav-primary-text-color;
+			}
+			&:hover {
+				text-decoration: inherit;
+				background:@nav-primary-background-hover;
+			}
+			&.active {
+				background:@nav-primary-background-hover;
+
+			}
+			&.notifications {
+				i {
+					@media (min-width: @screen-sm) {
+						position: relative;
+
+						&:after {
+							content: "•";
+							color: @color-accent;
+							position:relative;
+							top: -15px;
+							font-size: 12px;
+							.animate();
+
+						}
+					}
+				}
+			}
+			.badge {
+				position: absolute;
+				right: 12px;
+				top: 12px;
+				opacity: 1;
+				line-height: 0;
+				padding: 14px 10px;
+				.animate();
+
+			}
+		}
+	}
+	.user{
+		background: @nav-primary-background;
+		height: 60px;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		border-top: solid 1px @nav-primary-text-color;
+		@media (min-width: @screen-sm) {
+			height: auto;
+			border: none;
+		}
+		.actions{
+			font-size: 16px;
+
+			a{
+				display: inline-block;
+				line-height: 48px;
+				white-space: nowrap;
+				position: relative;
+				opacity: 0.7;
+				padding:0 18px;
+				font-size: 16px;
+				border: none;
+				color: @nav-primary-text-color;
+				i {
+					font-size: 20px;
+				}
+				@media (min-width: @screen-sm) {
+					display: block;
+				}
+
+				.label, .badge {
+					display: none;
+					@media (min-width: @screen-sm) {
+						display: inline;
+						opacity: 1;
+						
+					}
+				}
+				.label {
+					color: rgba(255,255,255,0.5);
+				}
+				.badge {
+					@media (min-width: @screen-sm) {
+						position: absolute;
+						right: 12px;
+						top: 12px;
+						opacity: 1;
+						line-height: 0;
+						padding: 14px 10px;
+					}
+				}
+
+				i{
+					@media (min-width: @screen-sm) {
+						margin-right: 24px;	
+					}
+				}
+				&.active{
+					opacity: 1;
+					
+				}
+				&:hover {
+					background: @nav-primary-background-hover;
+					text-decoration: none;
+				}
+			}
+		}
+		.avatar {
+			position: absolute;
+			right: 12px;
+			top: 12px;
+			border: none; 
+			.name {
+				display: none;
+				@media (min-width: @screen-sm) {
+					margin: 0;
+					line-height: 48px;
+					font-size: 24px;
+					font-weight: 200;
+					color: #fff;
+					white-space: nowrap;
+					display: inline;
+					text-decoration: none;
+					position: absolute;
+				}
+			}
+			img {
+				width: 35px;
+				@media (min-width: @screen-sm) {
+					margin-right: 18px;
+				}
+			}
+			@media (min-width: @screen-sm) {
+				position: relative;
+				right: auto;
+				top: auto;
+				padding: 12px;
+				display: block;
+				border-top: solid 1px #fff;
+			}
+		}
+	}
+
+	.close-btn {
+		.btn--round();
+		.btn--sm();
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		background: @color-primary;
+		color: @nav-primary-text-color;
+		@media (min-width: @screen-sm) {
+			display: none;
+		}
+	}
+	&.closed {
+		max-height: 0px;
+
+		@media (min-width: @screen-sm) {
+			max-height: 2000px;
+			max-width:60px;
+			.logo-full {
+				opacity: 0;
+			}
+			.logo-icon {
+				opacity: 1;
+				height: 36px;
+				top: 6px;
+				left: 6px;
+			}
+			.modules a .badge {
+				opacity: 0;
+			}
+			h3 {
+				color: rgba(0,0,0,0.0);
+			}
+			.actions{
+				a{
+					.label, .badge {
+						opacity: 0;
+					}
+				}
+			}
+			.avatar {
+				.label {
+					opacity: 0;
+				}
+			}
+
+		}
+		
+	}
+}
+
+nav.secondary{
+	.shadow-level-1();
+	max-height: 4000px;
+	background: @nav-secondary-background;
+	color: @nav-secondary-text-color;
+	padding-left: 0;
+	overflow: hidden;
+	width: 100%;
+	@media (min-width: @screen-sm) {
+		padding-left: 60px;
+	}
+
+	@media (min-width: @screen-md) {
+		width: auto;
+		position:absolute;
+		padding-left: 0;
+		margin: 0;
+		top: 296px;
+		left: 60px;
+		bottom: 0;
+		width: 300px;
+		margin: 0;
+		transition: none;
+		transition: max-height @animation-speed-default @animation-type, left @animation-speed-default @animation-type;
+
+	}
+	@media (min-width: @screen-xl) {
+		body.nav-open &{
+			left: 300px;
+		}
+	}
+	&.closed {
+		max-height: 0px;
+		@media (min-width: @screen-md) {
+			max-height: 0;
+		}
+		
+	}
+	&.affix {
+		position: fixed;
+		top: 67px;
+		@media (min-width: @screen-sm) {
+			top: 90px;
+		}
+	}
+	a {
+		display: block;
+		border: none;
+		line-height: 48px;
+		position: relative;
+		color: @nav-secondary-text-color;
+		padding-left:24px;
+		font-size: 18px;
+		.animate-fast();
+		&:hover {
+			background: @nav-secondary-background-hover;
+		}
+		&.active {
+			background: @nav-secondary-background-hover;
+
+
+		}
+		.badge {
+			float: right;
+			margin: 12px;
+			line-height: 0;
+			padding: 14px 10px;
+		}
+		@media (min-width: @screen-md) {
+			color: @color-gray-dark;
+			&.active {
+				border-left-color:@nav-secondary-text-color;
+
+			}
+		}
+	}
+}
+
+.content > header{
+	.shadow-level-2();
+	z-index: 2;
+	background: @nav-header-background;
+	position: relative;
+	color: #fff;
+	.animate();
+	@media (min-width: @screen-sm) {
+
+		padding-left: 60px;
+
+	}
+	@media (min-width: @screen-xl) {
+		body.nav-open &{
+			padding-left: 300px;
+		}
+	}
+
+
+	.logo{
+		height: 48px;
+		margin: 12px;
+		@media (min-width: @screen-sm) {
+			display: none;
+		}
+	}
+	.menu-btn{
+		.btn--round();
+		.btn--sm();
+		background: @color-dark;
+		position: fixed;
+		top: 0px;
+		right: 0px;
+		@media (min-width: @screen-sm) {
+			display: none;
+		}
+
+	}
+	&.affix {
+		min-height: 60px;
+		left:0;
+		right: 0;
+		position: fixed;
+		@media (min-width: @screen-sm) {
+		}
+		.logo, .section-title {
+			display: none;
+		}
+		.page-title {
+			margin-right:48px;
+			// padding-right: 12px;
+			// padding-left: 12px;
+
+			@media (min-width: @screen-sm) {
+				margin-right: 12px;
+			}
+
+		}
+
+		
+	}
+	.section-title{
+		margin: 0;
+		color: inherit;
+		padding-top: 136px;
+		padding-left: 12px;
+		.animate();
+		@media (min-width: @screen-sm) {
+			padding-top: 186px;
+		}
+
+	}
+	.page-title{
+		color: inherit;
+		margin: 0;
+		position: relative;
+		margin:0;
+		padding: 12px 60px 12px 12px;
+		.animate();
+
+
+		
+		@media (max-width: @screen-sm) {
+		 font-size: 36px;
+		}
+
+		@media (min-width: @screen-md) {
+		 	padding-right: 12px
+		}
+		.title {
+			max-width: 100%;
+			padding-right: 0px;
+			.text-ellipsis();
+		}
+	}
+	.toggle-secondary-menu {
+			
+		
+		@media (min-width: @screen-md) {
+			display: inline-block;
+		}
+		span {
+			@media (min-width: @screen-sm) {
+				display: inline;
+			}
+		}
+		button {
+			.btn--round();
+			.btn--sm();
+			outline: none;
+			
+			margin: 0;
+			position:absolute;
+			background: #fff;
+			color: @color-primary;
+			right: 14px;
+			top: 14px;
+			transition: 0.3s;
+			i {
+				font-size: 20px;
+			}
+			@media (min-width: @screen-md) {
+				.center-vertical();
+				margin-top: 0;
+				// position: relative;
+				// top: auto;
+				right: -60px;
+			}
+			
+		}
+	}
+}
+
+
+
+
+@media (min-width: 600px) {
+	nav.primary .modules a.notifications i:after {
+		opacity: 0;
+	}
+	nav.primary.closed .modules a.notifications i:after {
+		opacity: 1;
+	}	
+}

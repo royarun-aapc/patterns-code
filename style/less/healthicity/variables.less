@@ -1,0 +1,329 @@
+
+
+
+
+
+/****************************** Colors ******************************/ 
+
+
+
+// Corporate
+@color-corporate-primary: 				rgb(255, 61, 77);
+@color-corporate-dark: 					rgb(182, 32, 45);
+@color-corporate-light: 				rgb(255, 173, 180);
+@color-corporate-accent: 				rgb(28, 160, 219);
+@color-corporate-darker: 				rgb(92, 0, 0);
+@color-corporate-lighter: 				rgb(255, 227, 229);
+@color-corporate-accent-secondary: 		rgb(186, 227, 245);
+
+// General Colors
+@color-gray: 							@color-gray-primary;
+@color-black: 							rgb(0,0,0);
+@color-white: 							rgb(255, 255, 255);
+@color-gray-primary:					rgb(150, 150, 150);
+@color-gray-darker: 					rgb(50, 50, 50);
+@color-gray-dark: 						rgb(100, 100, 100);
+@color-gray-light: 						rgb(200, 200, 200);
+@color-gray-lighter: 					rgb(230, 230, 230);
+
+// Application Colors
+@color-auditing: 						@color-auditing-primary;
+@color-compliance: 						@color-compliance-primary;
+@color-analytics: 						@color-analytics-primary;
+@color-training: 						@color-training-primary;
+@color-coding: 							@color-coding-primary;
+
+// Status Colors
+@color-success: 						rgb(121,175, 123);
+@color-success-light: 					rgb(188, 215, 189);
+@color-warning: 						rgb(252, 181, 77);
+@color-warning-light: 					rgb(254, 233, 201);
+@color-error: 							rgb(198, 93, 93);
+@color-error-light: 					rgb(238, 206, 206);
+@color-info: 							rgb(64, 134, 189);
+@color-info-light: 						rgb(197, 218, 235);
+
+// Auditing
+@color-auditing-primary: 				rgb(22, 150, 243);
+@color-auditing-dark: 					rgb(25, 118, 210);
+@color-auditing-light: 					rgb(100, 181, 246);
+@color-auditing-accent: 				@color-corporate-primary;
+@color-auditing-darker: 				rgb(13, 71, 161);
+@color-auditing-lighter: 				rgb(187, 22, 251 );
+@color-auditing-accent-secondary: 		@color-corporate-lighter;
+
+// compliance
+@color-compliance-primary: 				rgb(0, 188, 212);
+@color-compliance-dark: 				rgb(0, 151, 167);
+@color-compliance-light: 				rgb(77, 208, 225);
+@color-compliance-accent: 				@color-corporate-primary;
+@color-compliance-darker: 				rgb(0, 96, 100);
+@color-compliance-lighter: 				rgb(178, 235, 242);
+@color-compliance-accent-secondary: 	@color-corporate-lighter;
+
+// analytics
+@color-analytics-primary: 				rgb(0, 150, 136);
+@color-analytics-dark: 					rgb(0, 121, 107);
+@color-analytics-light: 				rgb(77, 182, 172);
+@color-analytics-accent: 				@color-corporate-primary;
+@color-analytics-darker: 				rgb(0, 77, 64);
+@color-analytics-lighter: 				rgb(178, 223, 219);
+@color-analytics-accent-secondary: 		@color-corporate-lighter;
+
+// training
+@color-training-primary: 				rgb(156, 39, 176);
+@color-training-dark: 					rgb(123, 31, 162);
+@color-training-light: 					rgb(186, 104, 200);
+@color-training-accent: 				@color-corporate-primary;
+@color-training-darker: 				rgb(74, 20, 140);
+@color-training-lighter: 				rgb(225, 190, 231);
+@color-training-accent-secondary: 		@color-corporate-lighter;
+
+// coding
+@color-coding-primary: 					rgb(63, 81, 181);
+@color-coding-dark: 					rgb(48, 63, 159);
+@color-coding-light: 					rgb(121, 134, 203);
+@color-coding-accent: 					@color-corporate-primary;
+@color-coding-darker: 					rgb(26, 35, 126);
+@color-coding-lighter: 					rgb(197, 202, 233);
+@color-coding-accent-secondary: 		@color-corporate-lighter;
+
+
+// Colors to be overwritten in each applicaiton.
+@color-primary: 				@color-corporate-primary;
+@color-light: 					@color-corporate-light;
+@color-dark: 					@color-corporate-dark;
+@color-lighter: 				@color-corporate-lighter;
+@color-darker: 					@color-corporate-darker;
+
+
+@color-accent: 					@color-corporate-accent;
+@color-accent-secondary: 		@color-corporate-accent-secondary;
+
+
+
+
+/****************************** Spacing ******************************/
+@spacing-padding-xs:				0.25rem;
+@spacing-padding-sm:				0.5rem;
+@spacing-padding-md:				1rem;
+@spacing-padding-lg:				1.5rem;
+@spacing-padding-xl:				2rem;
+@spacing-padding-super:				4rem;
+
+@spacing-margin-xs:					0.25rem;
+@spacing-margin-sm:					0.5rem;
+@spacing-margin-md:					1rem;
+@spacing-margin-lg:					1.5rem;
+@spacing-margin-xl:					2rem;
+
+
+/****************************** TYPOGRAPHY ******************************/
+@font-path: 						'../../fonts';
+@fa-version: 						'4.4';
+
+
+@type-color-dark: 					@color-gray-darker;
+@type-color-primary: 				@color-gray-dark;
+@type-color-light: 					@color-gray;
+
+@type-color-body: 					@type-color-primary;
+@type-color-heading-page: 			@type-color-dark;
+@type-color-heading-article: 		@type-color-dark;
+
+
+@type-font-primary: 				'Open Sans', sans-serif;
+@type-font-heading-page: 			'nexa',  sans-serif;
+@type-font-heading-article: 		@type-font-primary;
+
+
+@type-line-body: 					1.5em;
+@type-line-heading: 				1.2em;
+
+
+@type-margin-body: 					0 0 1rem;
+@type-margin-heading-page: 			1em 0 1rem;
+@type-margin-heading-article: 		1em 0 0.5em;
+
+
+@type-size-heading-1: 				55px;
+@type-size-heading-1-md: 			76px;
+
+
+@type-size-heading-2: 				35px;
+@type-size-heading-2-md: 			55px;
+
+@type-size-heading-3: 				28px;
+@type-size-heading-3-md: 			34px;
+
+@type-size-heading-4: 				22px;
+@type-size-heading-5: 				16px;
+@type-size-heading-6: 				12px;
+
+
+@type-size-body-primary: 			16px;
+@type-size-body-sm: 				12px;
+@type-size-body-lg: 				22px;
+
+
+@type-weight-thin: 					100;
+@type-weight-light: 				200;
+@type-weight-regular: 				300;
+@type-weight-semibold: 				500;
+@type-weight-bold: 					700;
+
+@type-weight-heading-1: 			@type-weight-thin;
+@type-weight-heading-2: 			@type-weight-thin;
+@type-weight-heading-3: 			@type-weight-light;
+@type-weight-heading-4: 			@type-weight-light;
+@type-weight-heading-5: 			@type-weight-semibold;
+@type-weight-heading-6: 			@type-weight-semibold;
+@type-weight-body: 					@type-weight-bold;
+
+
+
+
+/****************************** ICONOGRAPHY ******************************/
+
+@icon-font-primary: 			'FontAwesome';
+@icon-font-secondary: 			'healthicity';
+@icon-font-size-base:   		@type-size-body-primary;
+
+@icon-search: 					"\f002";
+@icon-add: 						"\f067";
+@icon-remove: 					"\f00d";
+@icon-edit: 					"\f040";
+@icon-next: 					"\f054";
+@icon-previous: 				"\f053";
+@icon-left: 					"\f0d9"; // caret-left
+@icon-right: 					"\f0da"; // caret-right
+@icon-down: 					"\f0d7"; // caret-down
+@icon-up: 						"\f0d8"; // caret-up
+@icon-settings: 				"\f013";
+@icon-filter: 					"\f0b0";
+@icon-success: 					"\f058";
+@icon-error: 					"\f071";
+@icon-warning: 					"\f06a";
+@icon-info: 					"\f05a";
+@icon-user: 					"\f007";
+@icon-tasks: 					"\f0cb";
+@icon-notifications: 			"\f0f3";
+@icon-messages: 				"\f0e0";
+@icon-reports: 					"\f200";
+@icon-calendar: 				"\f073";
+@icon-menu: 					"\f0c9";
+@icon-menu-secondary:			"\f142"; // ellipsis-v
+
+@icon-compliance-audits: 		"\f046";
+@icon-compliance-risk: 			"\f24e"; // balance-scale 
+@icon-compliance-incidents: 	"\f024";
+@icon-compliance-documents: 	"\f07c"; // folder-open
+@icon-compliance-attestations: 	"\f0ea"; // clipboard
+@icon-compliance-training: 		"\f19c"; // university
+@icon-compliance-roles: 		"\f0e8"; // sitemap
+@icon-compliance-toolbox: 		"\f0f2"; // suitcase
+@icon-compliance-superadmin: 	"\f132"; // shield
+
+
+
+
+/****************************** Shadows ******************************/
+@shadow-level-0:					0 0px 0px rgba(0,0,0,0.0), 0 0px 0px rgba(0,0,0,0.0);
+@shadow-level-1:					0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+@shadow-level-2:					0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+@shadow-level-3:					0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+@shadow-level-4:					0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+@shadow-level-5:					0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+
+
+/****************************** animations ******************************/
+@animation-type: 					cubic-bezier(.52,0,.53,1);
+@animation-speed-default: 			0.3s;
+@animation-speed-fast: 				0.1s;
+@animation-speed-slow: 				0.6s;
+
+
+
+/****************************** RESPONSIVE ******************************/
+
+@screen-xs:							300px;
+@screen-sm:							600px;
+@screen-md:							900px;
+@screen-lg:							1200px;
+@screen-xl:							1500px;
+
+@screen-xs-max:						(@screen-sm - 1);
+@screen-sm-max:						(@screen-md - 1);
+@screen-md-max:						(@screen-lg - 1);
+@screen-lg-max:						(@screen-xl - 1);
+
+@grid-columns:						12;
+@grid-gutter-width:					24px;
+
+@container-xs:						300px;
+@container-sm:						600px;
+@container-md:						900px;
+@container-lg:						1200px;
+@container-xl:						1500px;
+
+@container-golden-padding-sm: 		0 12px;
+@container-golden-padding-md: 		0 24px ;
+@container-golden-padding-lg: 		0 48px 0 192px;
+@container-golden-padding-xl: 		0 12% 0 31%;
+
+
+
+/****************************** FORMS ******************************/
+
+@input-disabled-color: 			@color-gray-lighter;
+@input-disabled-solid-color: 	@color-gray-lighter;
+@input-focus-color: 			@color-gray;
+@input-border-color: 			@color-gray;;
+@input-success-color: 			@color-success;
+@input-error-color: 			@color-error;
+
+
+@forms-label-active-size: 		@type-size-body-sm;
+
+@radio-empty-color: 			@color-gray;
+@radio-fill-color: 				@color-primary;
+
+@switch-checked-lever-bg: 		@color-light;
+@switch-bg-color: 				@color-primary;
+
+@switch-unchecked-bg: 			@color-gray-light;
+@switch-unchecked-lever-bg: 	@color-gray-primary;
+
+@label-font-size: 				@type-size-body-primary;
+
+
+
+/************************************************************************/
+/****************************** COMPONENTS ******************************/
+/************************************************************************/
+
+/****************************** headers ******************************/
+
+@header-size-default: 			@header-size-md;
+
+@header-size-xl: 				600px;
+@header-size-lg: 				400px;
+@header-size-md: 				150px;
+@header-size-sm: 				500px;
+
+
+/****************************** Navigation ******************************/
+
+@nav-primary-background: 			@color-dark;
+@nav-primary-background-hover: 		fade(@color-black, 15);
+@nav-primary-text-color: 			@color-white;
+
+@nav-secondary-background: 			@color-gray-lighter;
+@nav-secondary-background-hover: 	fade(@color-black, 15);
+@nav-secondary-text-color: 			@color-gray-darker;
+
+@nav-header-background: 			@color-primary;
+@nav-header-text-color: 			@color-white;
+
+
+
