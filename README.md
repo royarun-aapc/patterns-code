@@ -6,14 +6,14 @@ include the patterns-cocde repo in the root of your aplicaiton
 
 
 
-# Scripts
+## Scripts
 Codekit is used to compile the JS to healthicity.min.js
 
 
-#styles
+## styles
 
 
-#fonts
+## fonts
 
 
-#images
+## images
