@@ -3,8 +3,7 @@
 // --------------------------------------------------
 
 
-
-
+@navigation-min-height: 800px;
 
 main.content {
 	@media (min-width: @screen-sm) {
@@ -19,14 +18,6 @@ main.content {
 	}
 }
 
-
-
-// .flat-button(){
-// 	background: none;
-// 	border: none;
-// 	outline: none;
-	
-// }
 
 nav.primary{
 	.shadow-level-3();
@@ -47,34 +38,49 @@ nav.primary{
 
 	@media (min-width: @screen-sm) {
 			max-width: 300px;
-			padding-top: 100px;
+			padding-top: 0px;
 	}
+
 	.logo-full {
-		height: 60px;
-		margin: 12px;
+		width: 100%;
+		margin-bottom: 12px;
+		padding: 12px;
 		opacity: 1;
-		position: absolute;
-		top: 0;
-		left: 0;
+		
+		
 		display: none;
 		.animate();
+		img {
+			width: 200px;
+			display: block;
+			margin: 0 ;
+		}
+		h4 {
+			color: @color-white;
+			border-bottom-color: @color-white;
+			white-space: nowrap;
+			margin: 22px -12px 0;
+			padding: 0 12px 12px;
+			font-size: 16px;
+			font-weight: 600;
+		}
 		@media (min-width: @screen-sm) {
 			display: block;
 		}
 	}
 	.logo-icon {
 		height: 60px;
-		margin: 6px;
 		opacity: 0;
 		position: absolute;
-		top: 12px;
-		left: 12px;
+		top: 10px;
+		left: 10px;
 		display: none;
 		.animate();
 		@media (min-width: @screen-sm) {
 			display: block;
 		}
 	}
+
 	.modules{
 		h3{
 			color: @nav-primary-text-color;
@@ -88,7 +94,7 @@ nav.primary{
 			display: block;
 			padding-left:18px;
 			color: @nav-primary-text-color;
-			font-size: 16px;
+			font-size: 18px;
 			position: relative;
 			border: none;
 			.animate-fast();
@@ -141,12 +147,14 @@ nav.primary{
 		bottom: 0;
 		width: 100%;
 		border-top: solid 1px @nav-primary-text-color;
-		@media (min-width: @screen-sm) {
+		@media (min-width: @screen-sm) and (min-height: @navigation-min-height) {
 			height: auto;
 			border: none;
 		}
 		.actions{
 			font-size: 16px;
+			opacity: 1;
+			
 
 			a{
 				display: inline-block;
@@ -161,13 +169,13 @@ nav.primary{
 				i {
 					font-size: 20px;
 				}
-				@media (min-width: @screen-sm) {
+				@media (min-width: @screen-sm) and (min-height: @navigation-min-height) {
 					display: block;
 				}
 
 				.label, .badge {
 					display: none;
-					@media (min-width: @screen-sm) {
+					@media (min-width: @screen-sm) and (min-height: @navigation-min-height) {
 						display: inline;
 						opacity: 1;
 						
@@ -177,7 +185,7 @@ nav.primary{
 					color: rgba(255,255,255,0.5);
 				}
 				.badge {
-					@media (min-width: @screen-sm) {
+					@media (min-width: @screen-sm) and (min-height: @navigation-min-height) {
 						position: absolute;
 						right: 12px;
 						top: 12px;
@@ -188,7 +196,7 @@ nav.primary{
 				}
 
 				i{
-					@media (min-width: @screen-sm) {
+					@media (min-width: @screen-sm) and (min-height: @navigation-min-height) {
 						margin-right: 24px;	
 					}
 				}
@@ -209,7 +217,7 @@ nav.primary{
 			border: none; 
 			.name {
 				display: none;
-				@media (min-width: @screen-sm) {
+				@media (min-width: @screen-sm) and (min-height: @navigation-min-height) {
 					margin: 0;
 					line-height: 48px;
 					font-size: 24px;
@@ -223,11 +231,11 @@ nav.primary{
 			}
 			img {
 				width: 35px;
-				@media (min-width: @screen-sm) {
+				@media (min-width: @screen-sm) and (min-height: @navigation-min-height) {
 					margin-right: 18px;
 				}
 			}
-			@media (min-width: @screen-sm) {
+			@media (min-width: @screen-sm) and (min-height: @navigation-min-height) {
 				position: relative;
 				right: auto;
 				top: auto;
@@ -261,9 +269,10 @@ nav.primary{
 			}
 			.logo-icon {
 				opacity: 1;
-				height: 36px;
-				top: 6px;
-				left: 6px;
+				width: 60px;
+				left: 0;
+				top: 0;
+				
 			}
 			.modules a .badge {
 				opacity: 0;
@@ -277,6 +286,10 @@ nav.primary{
 						opacity: 0;
 					}
 				}
+				@media (min-width: @screen-sm) and (max-height: @navigation-min-height) {
+					opacity: 0;
+				}
+
 			}
 			.avatar {
 				.label {
@@ -387,8 +400,14 @@ nav.secondary{
 
 
 	.logo{
-		height: 48px;
-		margin: 12px;
+		padding: 12px;
+		img {
+			height: 48px;
+		}
+		h4 {
+			color: @color-white;
+			border-bottom: none;
+		}
 		@media (min-width: @screen-sm) {
 			display: none;
 		}
@@ -463,7 +482,6 @@ nav.secondary{
 		}
 	}
 	.toggle-secondary-menu {
-			
 		
 		@media (min-width: @screen-md) {
 			display: inline-block;
@@ -477,7 +495,6 @@ nav.secondary{
 			.btn--round();
 			.btn--sm();
 			outline: none;
-			
 			margin: 0;
 			position:absolute;
 			background: #fff;
@@ -485,15 +502,22 @@ nav.secondary{
 			right: 14px;
 			top: 14px;
 			transition: 0.3s;
+			background: @color-white;
 			i {
 				font-size: 20px;
 			}
 			@media (min-width: @screen-md) {
+				
 				.center-vertical();
 				margin-top: 0;
-				// position: relative;
-				// top: auto;
-				right: -60px;
+				right: -30px;
+				padding: 12px;
+				background-color: transparent;
+				box-shadow: none;
+				color: #fff;
+				i {
+					font-size: 30px;
+				}
 			}
 			
 		}
