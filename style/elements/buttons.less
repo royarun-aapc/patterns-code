@@ -57,14 +57,14 @@ button, a.btn {
 		.shadow-level-0();
 	}
 }
-.btn--tertiary() {
+.btn--tertiary(@color:@type-color-primary, @hover:@color-gray-lighter) {
 	.btn();
 	background: transparent;
 	.shadow-level-0();
 	transition: background @animation-speed-default @animation-type;
-	color: @type-color-primary;
+	color: @color;
 	&:hover {
-		background: @color-gray-lighter;
+		background: @hover;
 		.shadow-level-0();
 	}
 }
