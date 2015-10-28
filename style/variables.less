@@ -10,7 +10,7 @@
 
 @font-path: 						'../fonts';
 
-
+@root-font-size 				16px; // For REM units
 
 
 /****************************** Colors ******************************/ 
@@ -172,7 +172,7 @@
 @type-size-heading-6: 				12px;
 
 
-@type-size-body-primary: 			16px;
+@type-size-body-primary: 			@root-font-size;
 @type-size-body-sm: 				.8em;
 @type-size-body-lg: 				1.3em;
 
@@ -341,8 +341,9 @@
 @nav-primary-max-width: 			300px;
 @nav-primary-icon-size: 			1.5em;
 @nav-primary-logo-text-size: 		28px !important;
-@nav-primary-toggle-front-content-small: 	@icon-menu;
-@nav-primary-toggle-back-content-small: 	"Hide Menu";
+@nav-primary-toggle-front-content-sm: 	@icon-menu;
+@nav-primary-toggle-front-content-md: 	@icon-right;
+@nav-primary-toggle-back-content: 	"Hide Menu";
 
 @nav-secondary-background: 			@color-gray-lighter;
 @nav-secondary-background-hover: 	darken(@nav-secondary-background, 10);
