@@ -166,15 +166,18 @@ nav.primary .logo {
 			top: -6px;
 			&.front::after{
 				.icon;
-				content: @nav-primary-toggle-front-content-small;
+				content: @nav-primary-toggle-front-content-sm;
 				margin: 0;
 				display: inline;
 				font-size: 1.25em;
+				@media screen and (min-width: @screen-md) {
+						content: @nav-primary-toggle-front-content-md;
+					}
 			}
 			&.back {
 				.transform(rotateY( 180deg ));
 				&::after {
-					content: @nav-primary-toggle-back-content-small;
+					content: @nav-primary-toggle-back-content;
 				}
 			}
 		}
