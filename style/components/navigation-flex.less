@@ -164,13 +164,18 @@ nav.primary .logo {
 			.backface(hidden);
 			position: absolute;
 			top: -6px;
-			i {
+			.front::after{
+				.icon;
+				content: @nav-primary-toggle-front-content-small;
 				margin: 0;
 				display: inline;
 				font-size: 1.25em;
 			}
 			&.back {
 				.transform(rotateY( 180deg ));
+				&::after {
+					content: @nav-primary-toggle-back-content-small;
+				}
 			}
 		}
 		.nav-open &{
